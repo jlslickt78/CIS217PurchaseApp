@@ -95,7 +95,7 @@ $(document).ready(function () {
             $(".order-purchased").show();
             $("#confirmOrderBtn").hide();
             setTimeout(function () {
-                window.location = "index.php";
+                window.location = "../index.html";
             }, 4000);
 
         });

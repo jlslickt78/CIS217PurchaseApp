@@ -15,6 +15,7 @@ legend,
 .ui-input-text input,
 .ui-input-search input {
 	color: inherit;
+	text-shadow: inherit;
 }
 /* Form labels (overrides font-weight bold in bars, and mini font-size) */
 .ui-mobile label,
@@ -95,6 +96,7 @@ label.ui-btn {
 /* Radius clip workaround for cleaning up corner trapping */
 .ui-btn-corner-all,
 .ui-corner-all {
+	-webkit-background-clip: padding;
 	background-clip: padding-box;
 }
 /* Popup arrow */
@@ -561,4 +563,5 @@ button[disabled],
 .ui-noboxshadow .ui-btn:focus,
 .ui-noboxshadow .ui-focus {
 	outline-width: 1px;
+	outline-style: auto;
 }

@@ -1,15 +1,168 @@
-<?php require "includes/header.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Pizza.com
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/pizza.com_theme.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/main-styles.css" />
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<!--my js files-->
+	<script src="js/helper_functions.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
 
 <!--first page-->
 <div data-role="page" id="homePage">
 
-	<?php require "includes/nav.php"; ?>
-	<?php require "includes/toppings.php"; ?>
-	<?php require "includes/crust.php"; ?>
-	<?php require "includes/drinks.php"; ?>
-	<?php require "includes/current_order.php"; ?>
-	<?php require "includes/fav_order.php"; ?>
+	<!--main-nav-->
+	<div class="ui-header ui-bar-inherit" data-role="header" data-theme="a" role="banner">
+		<h1 data-role="heading" class="ui-title">Pizza.com</h1>
+		<a href="#" data-rel="back" class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Back</a>
 
+		<!--<a href="#homePage" class="ui-btn ui-alt-icon ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-shadow ui-corner-all" id="liHome">Home</a>-->
+	</div>
+	<!--End main-nav-->
+
+	<!--Begin Panels-->
+	<!--Toppings-->
+	<div data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true" data-theme="a" id="ToppingsPanel">
+		<div id="addToppings">
+			<h3>Add Toppings</h3>
+			<h4>All toppings are $1.25 each</h4>
+
+			<p class="p">Tap the menu item to add.</p>
+			<span class="itemAdded"></span>
+
+			<!-- panel content goes here -->
+			<ul id="toppings" class="ui-listview ui-list-view-inset ui-corner-all ui-shadow ui-alt-icon" data-inset="true"
+			    data-role="listview" data-position="window" data-icon="plus">
+
+				<li data-product="1" data-name="Red Peppers" data-price="1.25"><a href="#" class="addToCart">Red Peppers</a></li>
+				<li data-product="2" data-name="Mushrooms" data-price="1.25"><a href="#" class="addToCart">Mushrooms</a></li>
+				<li data-product="3" data-name="Pepperoni" data-price="1.25"><a href="#" class="addToCart">Pepperoni</a></li>
+				<li data-product="4" data-name="Olives" data-price="1.25"><a href="#" class="addToCart">Olives</a></li>
+
+			</ul>
+			<br>
+			<div class="ui-body ui-body-a ui-corner-all">
+				<h3>Review your order.</h3>
+
+				<a href="#CurrOrderPanel" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Current Order</a>
+				<a href="#" class="ui-btn ui-btn-icon-right ui-alt-icon ui-icon-delete" data-rel="close">Close</a>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- Toppings/panel -->
+
+	<!--Crust-->
+	<div data-role="panel" id="CrustPanel" data-position="right" data-display="reveal" data-theme="a">
+		<div id="addCrust">
+			<h3>Choose your crust.</h3>
+			<h4>All crust choices are $3.99</h4>
+
+			<p>Tap the menu item to add.</p>
+			<div class="itemAdded"></div>
+			<!-- panel content goes here -->
+			<ul class="ui-listview ui-list-view-inset ui-corner-all ui-shadow ui-alt-icon" data-inset="true" data-icon="plus"
+			    data-role="listview" data-position="window">
+
+				<li data-product="5" data-name="garlic crust" data-price="3.99"><a href="#" class="addToCart">Garlic</a></li>
+				<li data-product="6" data-name="parmesan crust" data-price="3.99"><a href="#" class="addToCart">Parmesan</a></li>
+				<li data-product="7" data-name="stuffed crust" data-price="3.99"><a href="#" class="addToCart">Stuffed</a></li>
+				<li data-product="8" data-name="thin crust" data-price="3.99"><a href="#" class="addToCart">Thin</a></li>
+
+			</ul>
+			<br>
+			<div class="ui-body ui-body-a ui-corner-all">
+				<h3>Review your order.</h3>
+
+				<a href="#CurrOrderPanel" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Current Order</a>
+				<a href="#" class="ui-btn ui-btn-icon-right ui-alt-icon ui-icon-delete" data-rel="close">Close</a>
+			</div>
+		</div>
+	</div>
+	<!--End crust-->
+
+	<!--Drinks-->
+	<div data-role="panel" id="DrinksPanel" data-position="right" data-display="reveal" data-theme="a">
+		<div id="addDrinks">
+			<h3>Add A Drink</h3>
+			<h4>All drinks are $2.00 each</h4>
+
+			<p>Tap the menu item to add.</p>
+			<div class="itemAdded"></div>
+			<!-- panel content goes here -->
+			<ul class="ui-listview ui-list-view-inset ui-corner-all ui-shadow ui-alt-icon" data-inset="true"
+			    data-role="listview" data-position="window" data-icon="plus">
+
+				<li data-product="9" data-name="Coke" data-price="2"><a href="#" class="addToCart">Coke</a></li>
+				<li data-product="10" data-name="Sprite" data-price="2"><a href="#" class="addToCart">Sprite</a></li>
+				<li data-product="11" data-name="Pepsi" data-price="2"><a href="#" class="addToCart">Pepsi</a></li>
+				<li data-product="12" data-name="Root Beer" data-price="2"><a href="#" class="addToCart">Root Beer</a></li>
+
+			</ul>
+
+			<br>
+			<div class="ui-body ui-body-a ui-corner-all">
+				<h3>Review your order.</h3>
+
+				<a href="#CurrOrderPanel" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Current Order</a>
+				<a href="#" class="ui-btn ui-btn-icon-right ui-alt-icon ui-icon-delete" data-rel="close">Close</a>
+			</div>
+		</div>
+
+	</div><!-- /panel -->
+	<!--End drinks-->
+
+	<!--Current Order-->
+	<div data-role="panel" data-position="right" data-display="reveal" data-theme="a" id="CurrOrderPanel">
+		<div class="orderSummary">
+			<h3>Review your Order.</h3>
+
+			<div class="cartDisplay"></div>
+
+		</div>
+
+		<!-- panel content goes here -->
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#" class="ui-btn ui-btn-corner-all" data-rel="close">Cancel</a>
+
+			<a href="#confirmOrder" class="ui-btn ui-btn-corner-all">Submit Order</a>
+		</div>
+
+	</div><!-- /panel -->
+	<!--End current order-->
+
+
+	<!--Favorite order-->
+	<div data-role="panel" data-position="right" data-display="reveal" data-theme="a" id="FavOrderPanel">
+		<div class="orderSummary">
+			<h3>Favorite Order</h3>
+
+			<div class="cartDisplay"></div>
+
+		</div>
+
+		<!-- panel content goes here -->
+		<a href="#" class="ui-btn ui-btn-icon-right ui-alt-icon ui-icon-delete" data-rel="close">Close</a>
+
+
+	</div><!-- /panel -->
+	<!--End favorite order-->
+	<!--End panels-->
+
+	<!--Home page main content-->
 	<div data-role="main" class="ui-content" data-theme="a" >
 
 		<!--collapsible set menu-->
@@ -21,7 +174,7 @@
 
 				<p>
 					<cite><a href="tel:509-GET-PIZZA" data-role="button">Order by Phone</a></cite>
-				<address>Hours: 8:00am - 9:00pm</address>
+					<address>Hours: 8:00am - 9:00pm</address>
 				</p>
 			</div>
 
@@ -66,23 +219,72 @@
 	</div>
 
 	<!--Footer	-->
-	<?php require "includes/footer.php"; ?>
+	<div data-role="footer">
+		<h4>&copy; pizza.com, 2014 All rights Reserved.</h4>
+	</div>
 	<!--End footer-->
 </div>
 <!--End home page-->
 
-<!--begin Confirm Order-->
-
-<?php require "includes/confirm_order.php"; ?>
-
-<!--End Confirm Order-->
-
 <!--store directions-->
-<?php require "includes/store_directions.php" ?>
+<div data-role="page" id="storeDirections">
+	<!--main-nav-->
+	<div class="ui-header ui-bar-inherit" data-role="header" data-theme="a" role="banner">
+		<h1 data-role="heading" class="ui-title">Pizza.com</h1>
+		<a href="#" data-rel="back"
+		   class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Back</a>
+
+		<!--<a href="#homePage" class="ui-btn ui-alt-icon ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-shadow ui-corner-all" id="liHome">Home</a>-->
+	</div>
+	<!--End main-nav-->
+
+	<div id="map"></div>
+
+	<div data-role="footer">
+		<h4>&copy; pizza.com, 2014 All rights Reserved.</h4>
+	</div>
+</div>
 <!--End store directions-->
 
+<!--Confirm Order-->
+<div data-role="page" id="confirmOrder">
+	<div data-role="main" class="ui-content" data-theme="a">
+		<h3>Review your Order.</h3>
 
+		<div class="cartDisplay"></div>
+		<form id="orderForm">
+			<label for="username">Name:</label>
+			<input type="text" name="username" id="username" value="" required />
 
+			<label for="email">Email:</label>
+			<input type="text" name="email" id="email" value="" required />
+
+			<label for="address">Address:</label>
+			<input type="text" name="address" id="address" value="" required />
+
+			<a href="#homePage" class="ui-btn ui-btn-corner-all">Cancel</a>
+			<span class="itemSaved"></span>
+			<button id="saveOrder" type="button" class="ui-btn ui-btn-corner-all">Save</button>
+
+			<div class="order-purchased">
+				<h3>Thank you for your order.</h3>
+				<p>An email has been sent containing you order information.</p>
+				<p>You'll will now be redirected to the home page.</p>
+			</div>
+
+			<button id="confirmOrderBtn" type="submit" class="ui-btn ui-btn-corner-all">Confirm Order</button>
+
+		</form>
+	</div>
+
+	<!--Footer	-->
+	<div data-role="footer">
+		<h4>&copy; pizza.com, 2014 All rights Reserved.</h4>
+	</div>
+
+	<!--End footer-->
+</div>
+<!--End confirm order-->
 
 
 
