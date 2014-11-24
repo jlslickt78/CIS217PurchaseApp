@@ -150,12 +150,6 @@ $(document).ready(function () {
         var map = '<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ' +
             'src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=' + lat + ',' + lng + '&amp;daddr=1603+N+Altamont+St,+Spokane,+WA&amp;hl=en&amp;geocode=FS9s1wIdmDYB-SF2zBtwW8b6yylnwP9oSh-eVDF2zBtwW8b6yw%3BFStu1wIdXP0A-SmNuVTLyRieVDGn24GBbenhqQ&amp;aq=0&amp;oq=1603&amp;sll=37.424915,-122.072205&amp;sspn=0.088066,0.209255&amp;t=h&amp;mra=ls&amp;ie=UTF8&amp;ll=47.675912,-117.369287&amp;spn=0.006078,0.01196&amp;output=embed"></iframe>' +
             '<br /><small><a href="https://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=' + lat + ',' + lng + '&amp;daddr=1603+N+Altamont+St,+Spokane,+WA&amp;hl=en&amp;geocode=FS9s1wIdmDYB-SF2zBtwW8b6yylnwP9oSh-eVDF2zBtwW8b6yw%3BFStu1wIdXP0A-SmNuVTLyRieVDGn24GBbenhqQ&amp;aq=0&amp;oq=1603&amp;sll=37.424915,-122.072205&amp;sspn=0.088066,0.209255&amp;t=h&amp;mra=ls&amp;ie=UTF8&amp;ll=47.675912,-117.369287&amp;spn=0.006078,0.01196" style="color:#0000FF;text-align:left">View Larger Map</a></small>';
-        // <iframe src="https://www.google.com/maps/embed?pb=!1m29!1m12!1m3!1d5372.92715988595!2d-117.37308150939835!3d47.67541633159824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m14!1i0!3e6!4m5!1s0x549e1f4a68ffc067%3A0xcbfac65b701bcc76!2sSpokane+Community+College%2C+1810+N+Greene+St%2C+Spokane%2C+WA+99217!3m2!1d47.672367!2d-117.36099999999999!4m5!1s0x549e18c9cb54b98d%3A0xa9e1e96d8181dba7!2s1603+N+Altamont+St%2C+Spokane%2C+WA+99207!3m2!1d47.672875!2d-117.37565199999999!5e0!3m2!1sen!2sus!4v1416257092618" width="400" height="300" frameborder="0" style="border:0"></iframe>
-
-        /*my location*/
-        // 1603+N+Altamont+St,+Spokane,+WA+99207
-        /*https://www.google.com/maps/dir//1603+N+Altamont+St,+Spokane,+WA+99207/@47.6728821,-117.3802654,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x549e18c9cb54b98d:0xa9e1e96d8181dba7!2m2!1d-117.375652!2d47.672875*/
-        //$("#currentLocation").html(location);
         $("#map").html(map);
     });
 
