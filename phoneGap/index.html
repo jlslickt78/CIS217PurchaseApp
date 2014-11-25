@@ -233,10 +233,12 @@
 					pure pizza perfection heaven.</p>
 			</div>
 
-			<!--Contact-->
+			<!--GPS-->
 			<div id="GPS" data-role="collapsible">
 				<h3>GPS</h3>
-				<a href="#myGPS" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Your Location</a>
+				<div class="gpsPosition"></div>
+				<button type="button" class="getPosition ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Get your position</button>
+				<!--<a href="#myGPS" class="getPosition ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Get your position</a>-->
 			</div>
 		</div>
 
@@ -312,7 +314,7 @@
 </div>
 <!--End confirm order-->
 
-<!--Contact-->
+<!--GPS-->
 <div data-role="page" id="myGPS">
 	<!--main-nav-->
 	<div class="ui-header ui-bar-inherit" data-role="header" data-theme="a" role="banner">
@@ -325,7 +327,8 @@
 
 	<div data-role="main" class="ui-content" data-theme="a">
 
-		<button type="button" class="openGPS ui-btn ui-btn-corner-all">Get my Position</button>
+		<div class="gpsPosition"></div>
+		<!--<button type="button" class="openGPS ui-btn ui-btn-corner-all">Get my Position</button>-->
 	</div>
 
 	<!--Footer	-->
@@ -335,7 +338,7 @@
 	<!--End footer-->
 
 </div>
-<!--End contact-->
+<!--End GPS-->
 
 
 
