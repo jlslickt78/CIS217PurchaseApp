@@ -1,0 +1,3 @@
+<feature name="Calendar">
+    <param name="android-package" value="nl.xservices.plugins.Calendar" />
+</feature>
