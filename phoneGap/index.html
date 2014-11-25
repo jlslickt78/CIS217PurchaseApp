@@ -6,17 +6,15 @@
 	</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/pizza.com_theme.css" />
-	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-	<link rel="stylesheet" href="css/main-styles.css" />
+	<link rel="stylesheet" href="css/pizza.com_theme.css"/>
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css"/>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"/>
+	<link rel="stylesheet" href="css/main-styles.css"/>
 
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.js"></script>
 	<!--my js files-->
-	<script src="js/helper_functions.js"></script>
-	<script type="text/javascript" src="js/Calendar.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
@@ -27,7 +25,8 @@
 	<!--main-nav-->
 	<div class="ui-header ui-bar-inherit" data-role="header" data-theme="a" role="banner">
 		<h1 data-role="heading" class="ui-title">Pizza.com</h1>
-		<a href="#" data-rel="back" class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Back</a>
+		<a href="#" data-rel="back"
+		   class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Back</a>
 
 		<!--<a href="#homePage" class="ui-btn ui-alt-icon ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-shadow ui-corner-all" id="liHome">Home</a>-->
 	</div>
@@ -35,7 +34,8 @@
 
 	<!--Begin Panels-->
 	<!--Toppings-->
-	<div data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true" data-theme="a" id="ToppingsPanel">
+	<div data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true" data-theme="a"
+	     id="ToppingsPanel">
 		<div id="addToppings">
 			<h3>Add Toppings</h3>
 			<h4>All toppings are $1.25 each</h4>
@@ -47,13 +47,15 @@
 			<ul id="toppings" class="ui-listview ui-list-view-inset ui-corner-all ui-shadow ui-alt-icon" data-inset="true"
 			    data-role="listview" data-position="window" data-icon="plus">
 
-				<li data-product="1" data-name="Red Peppers" data-price="1.25"><a href="#" class="addToCart">Red Peppers</a></li>
+				<li data-product="1" data-name="Red Peppers" data-price="1.25"><a href="#" class="addToCart">Red Peppers</a>
+				</li>
 				<li data-product="2" data-name="Mushrooms" data-price="1.25"><a href="#" class="addToCart">Mushrooms</a></li>
 				<li data-product="3" data-name="Pepperoni" data-price="1.25"><a href="#" class="addToCart">Pepperoni</a></li>
 				<li data-product="4" data-name="Olives" data-price="1.25"><a href="#" class="addToCart">Olives</a></li>
 
 			</ul>
 			<br>
+
 			<div class="ui-body ui-body-a ui-corner-all">
 				<h3>Review your order.</h3>
 
@@ -73,18 +75,21 @@
 			<h4>All crust choices are $3.99</h4>
 
 			<p>Tap the menu item to add.</p>
+
 			<div class="itemAdded"></div>
 			<!-- panel content goes here -->
 			<ul class="ui-listview ui-list-view-inset ui-corner-all ui-shadow ui-alt-icon" data-inset="true" data-icon="plus"
 			    data-role="listview" data-position="window">
 
 				<li data-product="5" data-name="garlic crust" data-price="3.99"><a href="#" class="addToCart">Garlic</a></li>
-				<li data-product="6" data-name="parmesan crust" data-price="3.99"><a href="#" class="addToCart">Parmesan</a></li>
+				<li data-product="6" data-name="parmesan crust" data-price="3.99"><a href="#" class="addToCart">Parmesan</a>
+				</li>
 				<li data-product="7" data-name="stuffed crust" data-price="3.99"><a href="#" class="addToCart">Stuffed</a></li>
 				<li data-product="8" data-name="thin crust" data-price="3.99"><a href="#" class="addToCart">Thin</a></li>
 
 			</ul>
 			<br>
+
 			<div class="ui-body ui-body-a ui-corner-all">
 				<h3>Review your order.</h3>
 
@@ -102,6 +107,7 @@
 			<h4>All drinks are $2.00 each</h4>
 
 			<p>Tap the menu item to add.</p>
+
 			<div class="itemAdded"></div>
 			<!-- panel content goes here -->
 			<ul class="ui-listview ui-list-view-inset ui-corner-all ui-shadow ui-alt-icon" data-inset="true"
@@ -115,6 +121,7 @@
 			</ul>
 
 			<br>
+
 			<div class="ui-body ui-body-a ui-corner-all">
 				<h3>Review your order.</h3>
 
@@ -123,7 +130,8 @@
 			</div>
 		</div>
 
-	</div><!-- /panel -->
+	</div>
+	<!-- /panel -->
 	<!--End drinks-->
 
 	<!--Current Order-->
@@ -142,9 +150,9 @@
 			<a href="#confirmOrder" class="ui-btn ui-btn-corner-all">Submit Order</a>
 		</div>
 
-	</div><!-- /panel -->
+	</div>
+	<!-- /panel -->
 	<!--End current order-->
-
 
 	<!--Favorite order-->
 	<div data-role="panel" data-position="right" data-display="reveal" data-theme="a" id="FavOrderPanel">
@@ -159,26 +167,28 @@
 		<a href="#" class="ui-btn ui-btn-icon-right ui-alt-icon ui-icon-delete" data-rel="close">Close</a>
 
 
-	</div><!-- /panel -->
+	</div>
+	<!-- /panel -->
 	<!--End favorite order-->
 	<!--End panels-->
 
 	<!--Home page main content-->
-	<div data-role="main" class="ui-content" data-theme="a" >
+	<div data-role="main" class="ui-content" data-theme="a">
 
 		<!--collapsible set menu-->
 		<div id="main-content-collapsibleset"
 		     class="ui-alt-icon"
 		     data-role="collapsibleset" data-iconpos="right">
+
+			<!--Call us-->
 			<div id="CallUS" data-role="collapsible" class="main-content-collapse">
 				<h3>Call us</h3>
 
-				<p>
-					<cite><a href="tel:509-GET-PIZZA" data-role="button">Order by Phone</a></cite>
-					<address>Hours: 8:00am - 9:00pm</address>
-				</p>
+				<cite><a href="tel:509-GET-PIZZA" data-role="button">Order by Phone</a></cite>
+				<address>Hours: 8:00am - 9:00pm</address>
 			</div>
 
+			<!--Menu-->
 			<div id="Menu" data-role="collapsible" data-collapsed="false">
 
 				<h3>Menu</h3>
@@ -192,28 +202,41 @@
 
 			</div>
 
+			<!--Order-->
 			<div id="Order" data-role="collapsible">
 				<h3>Order</h3>
 				<ul data-role="listview" class="ui-listview ui-listview-inset ui-shadow" data-inset="true">
-					<li><a href="#CurrOrderPanel" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Current Order</a></li>
-					<li><a href="#FavOrderPanel" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Favorite Order</a></li>
+					<li><a href="#CurrOrderPanel" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Current Order</a>
+					</li>
+					<li><a href="#FavOrderPanel" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Favorite Order</a>
+					</li>
 				</ul>
 
 			</div>
 
+			<!--Location-->
 			<div id="Location" data-role="collapsible">
 
 				<h3>Location</h3>
+
 				<p>We are located at: <cite>1603 N Altamont st. Spokane Wa, 99207</cite></p>
 
 				<!--<div id="currentLocation"></div>-->
 				<a href="#storeDirections" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Get Directions</a>
 			</div>
 
+			<!--About-->
 			<div id="About" data-role="collapsible">
 				<h3>About Us</h3>
 
-				<p>Pizza.com was established in 600 B.C. and have been reinventing the wheel ever since. Every pizza we make is pure pizza perfection heaven.</p>
+				<p>Pizza.com was established in 600 B.C. and have been reinventing the wheel ever since. Every pizza we make is
+					pure pizza perfection heaven.</p>
+			</div>
+
+			<!--Contact-->
+			<div id="myContactInfo" data-role="collapsible">
+				<h3>Contacts</h3>
+				<a href="#contacts" class="ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Your Contacts</a>
 			</div>
 		</div>
 
@@ -255,13 +278,13 @@
 		<div class="cartDisplay"></div>
 		<form id="orderForm">
 			<label for="username">Name:</label>
-			<input type="text" name="username" id="username" value="" required />
+			<input type="text" name="username" id="username" value="" required/>
 
 			<label for="email">Email:</label>
-			<input type="text" name="email" id="email" value="" required />
+			<input type="text" name="email" id="email" value="" required/>
 
 			<label for="address">Address:</label>
-			<input type="text" name="address" id="address" value="" required />
+			<input type="text" name="address" id="address" value="" required/>
 
 			<a href="#homePage" class="ui-btn ui-btn-corner-all">Cancel</a>
 			<span class="itemSaved"></span>
@@ -269,7 +292,9 @@
 
 			<div class="order-purchased">
 				<h3>Thank you for your order.</h3>
+
 				<p>An email has been sent containing you order information.</p>
+
 				<p>You'll will now be redirected to the home page.</p>
 			</div>
 
@@ -286,6 +311,30 @@
 	<!--End footer-->
 </div>
 <!--End confirm order-->
+
+<!--Contact-->
+<div data-role="page" id="contacts">
+	<!--main-nav-->
+	<div class="ui-header ui-bar-inherit" data-role="header" data-theme="a" role="banner">
+		<h1 data-role="heading" class="ui-title">Pizza.com</h1>
+		<a href="#" data-rel="back"
+		   class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Back</a>
+		<a href="index.html" class="ui-btn ui-btn-b ui-alt-icon ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-shadow ui-corner-all">Home</a>
+	</div>
+	<!--End main-nav-->
+
+	<div data-role="main" class="ui-content" data-theme="a">
+		<button type="button" class="openContacts ui-btn ui-btn-corner-all">Open Contacts</button>
+	</div>
+
+	<!--Footer	-->
+	<div data-role="footer">
+		<h4>&copy; pizza.com, 2014 All rights Reserved.</h4>
+	</div>
+	<!--End footer-->
+
+</div>
+<!--End contact-->
 
 
 
