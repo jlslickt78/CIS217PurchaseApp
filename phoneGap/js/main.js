@@ -154,21 +154,30 @@ $(document).ready(function () {
     });
 
     //gps
-    $(".openGPS").on("click", function(){
+    $(".getPosition").on("click", function(){
+        var options = {enableHighAccuracy: true, timeout:3000};
+        var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+        var  gpsPosition = $("gpsPosition");
         // onSuccess Callback
 // This method accepts a Position object, which contains the
 // current GPS coordinates
 //
-        var onSuccess = function(position) {
-            alert('Latitude: '        + position.coords.latitude          + '\n' +
-                'Longitude: '         + position.coords.longitude         + '\n' +
-                'Altitude: '          + position.coords.altitude          + '\n' +
-                'Accuracy: '          + position.coords.accuracy          + '\n' +
-                'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-                'Heading: '           + position.coords.heading           + '\n' +
-                'Speed: '             + position.coords.speed             + '\n' +
-                'Timestamp: '         + position.timestamp                + '\n');
-        };
+        /*var onSuccess = function(position) {
+         alert('Latitude: '        + position.coords.latitude          + '\n' +
+         'Longitude: '         + position.coords.longitude         + '\n' +
+         'Altitude: '          + position.coords.altitude          + '\n' +
+         'Accuracy: '          + position.coords.accuracy          + '\n' +
+         'Timestamp: '         + position.timestamp                + '\n');
+         };*/
+
+        function onSuccess(position){
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            gpsPosition.innerHTML = 'Latitude: ' + lat + '<br>' +
+                'Longitude: ' + lng  + '<br>' +
+                '<hr>' + gpsPosition.innerHTML;
+        }
 
 // onError Callback receives a PositionError object
 //
@@ -177,9 +186,7 @@ $(document).ready(function () {
                 'message: ' + error.message + '\n');
         }
 
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
     });
-
 
 
 });
