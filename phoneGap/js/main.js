@@ -95,7 +95,7 @@ $(document).ready(function () {
             $(".order-purchased").show();
             $("#confirmOrderBtn").hide();
             setTimeout(function () {
-                window.location = "../index.html";
+                window.location = "../../index.html";
             }, 4000);
 
         });
@@ -152,6 +152,15 @@ $(document).ready(function () {
             '<br /><small><a href="https://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=' + lat + ',' + lng + '&amp;daddr=1603+N+Altamont+St,+Spokane,+WA&amp;hl=en&amp;geocode=FS9s1wIdmDYB-SF2zBtwW8b6yylnwP9oSh-eVDF2zBtwW8b6yw%3BFStu1wIdXP0A-SmNuVTLyRieVDGn24GBbenhqQ&amp;aq=0&amp;oq=1603&amp;sll=37.424915,-122.072205&amp;sspn=0.088066,0.209255&amp;t=h&amp;mra=ls&amp;ie=UTF8&amp;ll=47.675912,-117.369287&amp;spn=0.006078,0.01196" style="color:#0000FF;text-align:left">View Larger Map</a></small>';
         $("#map").html(map);
     });
+
+    //contact picker
+   $(".openContacts").on("click", function(){
+      navigator.contacts.pickContact(function(contact){
+          console.log('The following contact has been selected:' + JSON.stringify(contact));
+      }, function(error){
+          console.log("Error: " + error);
+      });
+   });
 
 });
 
