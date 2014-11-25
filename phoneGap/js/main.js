@@ -157,7 +157,7 @@ $(document).ready(function () {
     $(".getPosition").on("click", function(){
         var options = {enableHighAccuracy: true, timeout:3000};
         var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
-        var  gpsPosition = $("gpsPosition");
+        var displayPosition = $(".displayPosition");
         // onSuccess Callback
 // This method accepts a Position object, which contains the
 // current GPS coordinates
@@ -174,11 +174,9 @@ $(document).ready(function () {
             var lat = position.coords.latitude;
             var lng = position.coords.longitude;
 
-            gpsPosition.innerHTML = 'Latitude: ' + lat + '<br>' +
-                'Longitude: ' + lng  + '<br>' +
-                '<hr>' + gpsPosition.innerHTML;
+            displayPosition.innerHTML = 'Latitude: ' + lat + '<br>' +
+                'Longitude: ' + lng  + '<br>';
         }
-
 // onError Callback receives a PositionError object
 //
         function onError(error) {
