@@ -152,38 +152,50 @@ $(document).ready(function () {
             '<br /><small><a href="https://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=' + lat + ',' + lng + '&amp;daddr=1603+N+Altamont+St,+Spokane,+WA&amp;hl=en&amp;geocode=FS9s1wIdmDYB-SF2zBtwW8b6yylnwP9oSh-eVDF2zBtwW8b6yw%3BFStu1wIdXP0A-SmNuVTLyRieVDGn24GBbenhqQ&amp;aq=0&amp;oq=1603&amp;sll=37.424915,-122.072205&amp;sspn=0.088066,0.209255&amp;t=h&amp;mra=ls&amp;ie=UTF8&amp;ll=47.675912,-117.369287&amp;spn=0.006078,0.01196" style="color:#0000FF;text-align:left">View Larger Map</a></small>';
         $("#map").html(map);
     });
+    //end google maps
 
-    //gps
+    //gps start watch
+    var watchID;
+    var displayPosition = $(".displayPosition");
     $(".getPosition").on("click", function(){
         var options = {enableHighAccuracy: true, timeout:3000};
         var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
-        var displayPosition = $(".displayPosition");
-        // onSuccess Callback
-// This method accepts a Position object, which contains the
-// current GPS coordinates
-//
-        /*var onSuccess = function(position) {
-         alert('Latitude: '        + position.coords.latitude          + '\n' +
-         'Longitude: '         + position.coords.longitude         + '\n' +
-         'Altitude: '          + position.coords.altitude          + '\n' +
-         'Accuracy: '          + position.coords.accuracy          + '\n' +
-         'Timestamp: '         + position.timestamp                + '\n');
-         };*/
+        var coordinates;
 
         function onSuccess(position){
             var lat = position.coords.latitude;
             var lng = position.coords.longitude;
+            var acc = position.coords.accuracy;
 
-            displayPosition.innerHTML = 'Latitude: ' + lat + '<br>' +
-                'Longitude: ' + lng  + '<br>';
+            localStorage.setItem("Latitude", lat);
+            localStorage.setItem("Longitude", lng);
+
+            coordinates = "Latitude: " + lat + "<br>"
+                + "Longitude: " + lng + "<br>"
+                + "Accuracy: " + acc;
+
+            displayPosition.html(coordinates);
         }
-// onError Callback receives a PositionError object
-//
+
         function onError(error) {
-            alert('code: '    + error.code    + '\n' +
-                'message: ' + error.message + '\n');
+            localStorage.setItem("message", error.message);
+
+            //alert('code: '    + error.code    + '\n' +
+                //'message: ' + error.message + '\n');
+        }
+    });
+
+    //gps clear watch
+    $(".stopPosition").on("click", function(){
+        function removeGeoLocation(){
+            navigator.geolocation.clearWatch(watchID);
+            localStorage.removeItem("message");
+            localStorage.removeItem("Latitude");
+            localStorage.removeItem("Longitude");
+            displayPosition.empty();
         }
 
+        removeGeoLocation();
     });
 
 
