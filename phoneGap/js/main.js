@@ -155,7 +155,7 @@ $(document).ready(function () {
     //end google maps
 
     //gps start watch
-    var watchID;
+    var watchID = null;
     var displayPosition = $(".displayPosition");
     $(".getPosition").on("click", function(){
         var options = {enableHighAccuracy: true, timeout:3000};
@@ -179,9 +179,6 @@ $(document).ready(function () {
 
         function onError(error) {
             localStorage.setItem("message", error.message);
-
-            //alert('code: '    + error.code    + '\n' +
-                //'message: ' + error.message + '\n');
         }
     });
 

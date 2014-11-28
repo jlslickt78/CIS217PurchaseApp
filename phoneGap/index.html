@@ -26,9 +26,9 @@
 	<div class="ui-header ui-bar-inherit" data-role="header" data-theme="a" role="banner">
 		<h1 data-role="heading" class="ui-title">Pizza.com</h1>
 		<a href="#" data-rel="back"
-		   class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Back</a>
+		   class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Back</a>
 
-		<!--<a href="#homePage" class="ui-btn ui-alt-icon ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-shadow ui-corner-all" id="liHome">Home</a>-->
+		<a href="index.html" class="ui-btn ui-btn-b ui-alt-icon ui-icon-home ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Home</a>
 	</div>
 	<!--End main-nav-->
 
@@ -237,8 +237,8 @@
 			<div id="GPS" data-role="collapsible">
 				<h3>GPS</h3>
 				<div class="displayPosition"></div>
-				<button type="button" class="getPosition ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Watch your position</button>
-				<button type="button" class="stopPosition ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Stop Watching</button>
+				<button type="button" class="getPosition ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Track your position</button>
+				<button type="button" class="stopPosition ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Stop Tracking</button>
 				<!--<a href="#myGPS" class="getPosition ui-btn ui-btn-icon-right ui-icon-arrow-r ui-alt-icon">Get your position</a>-->
 			</div>
 		</div>
@@ -259,13 +259,15 @@
 	<div class="ui-header ui-bar-inherit" data-role="header" data-theme="a" role="banner">
 		<h1 data-role="heading" class="ui-title">Pizza.com</h1>
 		<a href="#" data-rel="back"
-		   class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Back</a>
+		   class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Back</a>
 
-		<!--<a href="#homePage" class="ui-btn ui-alt-icon ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-shadow ui-corner-all" id="liHome">Home</a>-->
+		<a href="index.html" class="ui-btn ui-btn-b ui-alt-icon ui-icon-home ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Home</a>
 	</div>
 	<!--End main-nav-->
 
-	<div id="map"></div>
+	<div data-role="main" class="ui-content" data-theme="a">
+		<div id="map"></div>
+	</div>
 
 	<div data-role="footer">
 		<h4>&copy; pizza.com, 2014 All rights Reserved.</h4>
@@ -275,6 +277,16 @@
 
 <!--Confirm Order-->
 <div data-role="page" id="confirmOrder">
+	<!--main-nav-->
+	<div class="ui-header ui-bar-inherit" data-role="header" data-theme="a" role="banner">
+		<h1 data-role="heading" class="ui-title">Pizza.com</h1>
+		<a href="#" data-rel="back"
+		   class="ui-btn ui-btn-b ui-alt-icon ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Back</a>
+
+		<a href="index.html" class="ui-btn ui-btn-b ui-alt-icon ui-icon-home ui-btn-icon-right ui-btn-icon-notext ui-corner-all">Home</a>
+	</div>
+	<!--End main-nav-->
+
 	<div data-role="main" class="ui-content" data-theme="a">
 		<h3>Review your Order.</h3>
 
@@ -310,7 +322,6 @@
 	<div data-role="footer">
 		<h4>&copy; pizza.com, 2014 All rights Reserved.</h4>
 	</div>
-
 	<!--End footer-->
 </div>
 <!--End confirm order-->
